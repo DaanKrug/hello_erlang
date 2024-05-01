@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta http-equiv="Cache-Control" content="public, max-age=86400" />
+    	<meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    	<meta name="theme-color" content="#ffffff" />
+    	<link rel="preconnect" href="https://hello_erlang-cdn.s3-us-west-2.amazonaws.com" />
+    	<link rel="apple-touch-icon" href="https://hello_erlang-cdn.s3-us-west-2.amazonaws.com/pwa-192x192.png" />
+    	<link rel="manifest" href="./manifest.webmanifest" />
+    	<link rel="icon" type="image/x-icon" href="https://hello_erlang-cdn.s3-us-west-2.amazonaws.com/favicon.ico" />
+    	<meta name="title" content="Elixir Base App" />
+		<meta name="keywords" content="keywords" />
+		<meta name="description" content="description" />
+		<meta name="author" content="keywords" />
+		<meta name="rating" content="keywords" />
+		<style>
+        	body{padding: 0; margin: 0; overflow: hidden;}
+        	#appInternalFrame{display: none; border: 0; height: 100vh; width: 100%; overflow: hidden;}
+        </style>
+        <title>Hello Erlang App</title>
+    </head>
+    <body>
+        <div id="loading0">&nbsp;Loading ...</div>
+    	<iframe id="appInternalFrame" src="" title="Elixir Auto Gen App"></iframe>
+    	<script>
+    		if ('serviceWorker' in navigator) {
+			    window.addEventListener('load', () => {
+			    	navigator.serviceWorker.register('./serviceworker.js');
+			    });
+			}
+	    	var url = './hello_erlang/index.html';
+			var arr = window.location.href.split('?');
+			if(arr.length > 1){
+				url += '?' + arr[1];
+			}
+			var elem =  document.getElementById('appInternalFrame');
+			elem.src = url;
+			elem.style.display = 'block';
+    		setTimeout(function(){document.getElementById('loading0').style.display = 'none';},300);
+    	</script>
+    </body>
+</html>

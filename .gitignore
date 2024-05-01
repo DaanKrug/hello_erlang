@@ -1,0 +1,15 @@
+.idea/*
+_build/*
+articles/*
+config_old/*
+priv/*
+static_files/angular/*
+static_files/fontawesome-5.11/*
+static_files/headers/*
+static_files/themes/*
+static_files/tinymce-5.3.0/*
+static_files/webfonts/*
+ang-app/e2e/*
+ang-app/node_modules/*
+*.sh
+
